@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+    <p>Registration Application</p>
+    <mat-list role="list">
+      <mat-list-item role="listitem"><i class="fas fa-home"></i>&nbsp;&nbsp; HOME</mat-list-item>
+      <mat-list-item role="listitem"><i class="fas fa-pencil-ruler"></i>&nbsp;&nbsp; INTERIOR DESIGN</mat-list-item>
+      <mat-list-item role="listitem"><i class="fab fa-fort-awesome"></i>&nbsp;&nbsp; CONSTRUCTION</mat-list-item>
+      <mat-list-item role="listitem"><i class="fas fa-tools"></i>&nbsp;&nbsp; RENOVATION</mat-list-item>
+      <mat-list-item role="listitem"><i class="fas fa-house-damage"></i>&nbsp;&nbsp; HOME REPAIRES</mat-list-item>
+      <mat-list-item role="listitem"><i class="fas fa-broom"></i>&nbsp;&nbsp; HOME CLEANING</mat-list-item>
+      <mat-list-item role="listitem"><i class="fas fa-cut"></i>&nbsp; &nbsp;SALON AT HOME</mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <nav class="navbar fixed-top navbar-dark bg-dark">
+    <i class="fas fa-bars" (click)="drawer.toggle()"></i>
+    <span class="navbar-brand mb-0 h1"> Registration Application</span>
+    <p></p>
+  </nav>
+    <router-outlet></router-outlet>  
+</mat-drawer-container>
+

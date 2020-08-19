@@ -1,0 +1,55 @@
+<div class="container">
+  <button class="btn btn-primary btn-sm mr btn-export" (click)=exportexcel()>Export</button>
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="nameFilter">Name</label>
+            <input type="text" class="form-control" [(ngModel)]="nameSearchText" id="nameFilter" placeholder="Search">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="mobileFilter">Mobile</label>
+            <input type="text" class="form-control" [(ngModel)]="mobileSearchText" id="mobileFilter" placeholder="Search">
+        </div>
+        <div class="form-group col-md-3">
+            <label for="cityFilter">City</label>
+            <input type="text" class="form-control" [(ngModel)]="citySearchText" id="cityFilter" placeholder="Search">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="ServiceTyprFilter">Service Type</label>
+          <input type="text" class="form-control" [(ngModel)]="serviceTypeSearchText" id="ServiceTyprFilter" placeholder="Search">
+      </div>
+    </div>
+<div class="card">
+<table class="table table-responsive-sm" id="user-table" *ngIf="(users | nameFilter: nameSearchText | mobileFilter: mobileSearchText | cityFilter: citySearchText | serviceTypeFilter: serviceTypeSearchText).length > 0; else noResults">
+    <!-- <colgroup>
+      <col width="5%">
+      <col width="*">
+      <col width="35%">
+      <col width="15%">
+    </colgroup> -->
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">S.no</th>
+        <th scope="col">Name</th>
+        <th scope="col">Mobile No</th>
+        <th scope="col">City</th>
+        <th scope="col">Service Type</th>
+        <th scope="col">Experience</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | nameFilter: nameSearchText | mobileFilter: mobileSearchText | cityFilter: citySearchText | serviceTypeFilter: serviceTypeSearchText; let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.mobile}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.serviceType}}</td>
+        <td>{{user.experience}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <ng-template #noResults>
+    <p style="margin: 8px;">No results found</p>
+  </ng-template>
+  </div>

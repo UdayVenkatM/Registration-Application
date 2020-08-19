@@ -1,0 +1,83 @@
+.btn{
+    color: white;
+}
+.fa-bars{
+    color: white;
+    cursor: pointer;
+}
+.form-header{
+    color: grey;
+}
+.example-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.example-sidenav-content {
+    margin-top: 5vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.example-sidenav {
+    padding: 20px;
+    width: 35vmin;
+}
+.card-form{
+    padding: 3vmax;
+    padding-left: 5vmax;
+    padding-right: 5vmax;
+}
+.example-form{
+    margin-top: 15px;
+}
+.example-full-width {
+    width: 100%;
+  }
+.mat-radio-button ~ .mat-radio-button {
+    margin-top: 8px;
+    margin-left: 16px;
+}
+.btn-register{
+    background-color: #eb5160;
+    width: 50%;
+    border-radius: 30px;
+}
+.mat-list-item{
+    font-size: small;
+}
+/* Extra small devices */
+@media (max-width: 320px) {
+    .form-header{
+        font-size: medium;
+    }
+    .example-sidenav-content {
+        margin-top: 17%;
+    }
+    .example-sidenav {
+        padding: 20px;
+        width: 70vmin;
+    }
+}
+/*Small devices*/
+@media (min-width: 321px) and (max-width: 420px) {
+    .form-header{
+        font-size: large;
+    }
+    .example-sidenav-content {
+        margin-top: 13%;
+    }
+    .example-sidenav {
+        padding: 20px;
+        width: 70vmin;
+    }
+}
+/* Tablets and Landscape devices */
+@media (min-width: 568px) and (max-width: 1024px) {
+    .form-header{
+        font-size: large;
+    }
+    .example-sidenav-content {
+        margin-top: 13%;
+    }
+}

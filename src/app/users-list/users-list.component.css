@@ -1,0 +1,13 @@
+.container{
+    margin: 7%;
+}
+.table{
+    width: 100%;
+    margin-bottom: 0px;
+}
+.mr{
+    float: right;
+}
+.form-row{
+    margin-top: 10px;
+}
